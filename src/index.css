@@ -1,0 +1,212 @@
+/*@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Pacifico&display=swap");
+
+body {
+  font-family: "Pacifico", Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: beige;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.container {
+  margin: 50px;
+  width: 80vw;
+  height: 90vh;
+  border: 3px solid black;
+  border-radius: 5px;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+  padding: 10px;
+  background-color: azure;
+  overflow-y: auto;
+}
+.container::-webkit-scrollbar {
+  width: 10px; 
+}
+
+.container::-webkit-scrollbar-track {
+  background: #c3c3c3; 
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: #1a71b4; 
+  border-radius: 20px; 
+  border: 2px solid #1e1a1a; /
+}
+.title {
+  text-align: center;
+  font-size: 36px;
+  color: rgb(71, 67, 67);
+}
+input {
+  padding-left: 10px;
+  width: 50%;
+  border-radius: 15px;
+  height: 30px;
+  margin-bottom: 50px;
+}
+button {
+  margin-left: 50px;
+  height: 35px;
+  border-radius: 15px;
+}
+ul {
+  margin-left: 30px;
+}
+li {
+  margin-bottom: 10px;
+  color: rgb(56, 56, 56);
+  list-style: none;
+}
+#task {
+  font-size: 25px;
+}
+.buttons {
+  margin: 15px 50px;
+}
+.checkBox {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+.check {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0px;
+  right: -50px;
+}
+.theListItems {
+  position: relative;
+  width: 85%;
+  height: auto;
+  border: 5px solid black;
+  padding: 20px;
+  border-radius: 21px;
+  margin-bottom: 2px;
+  background-color: rgb(194, 212, 174);
+  z-index: 1;
+}
+.delete {
+  width: 100px;
+}
+.edit {
+  width: 100px;
+}
+  */
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Pacifico&display=swap");
+body {
+  font-family: "Pacifico", Arial, Helvetica, sans-serif;
+  background-color: brown;
+}
+body::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: brown; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(218, 212, 212); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 2px solid rgb(52, 45, 45); /* creates padding around scroll thumb */
+}
+.to-do-list {
+  text-align: center;
+  margin-top: 100px;
+}
+h1 {
+  font-size: 4rem;
+  color: rgb(168, 234, 216);
+}
+button {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5 ease;
+}
+.save-button {
+  padding: 7.5px 20px;
+  background-color: hsla(120, 100%, 25%, 0.395);
+}
+.save-button:hover {
+  background-color: hsla(120, 100%, 25%, 0.895);
+}
+.cancel-button {
+  padding: 7.5px 20px;
+  background-color: hsla(242, 14%, 36%, 0.395);
+}
+.cancel-button:hover {
+  background-color: hsla(0, 0%, 0%, 0.895);
+}
+.edit-input {
+  flex: 1;
+}
+.edit-button {
+  padding: 7.5px 20px;
+  background-color: hsla(120, 100%, 25%, 0.395);
+}
+.edit-button:hover {
+  background-color: hsla(120, 100%, 25%, 0.895);
+}
+.add-button {
+  background-color: rgba(136, 50, 218, 0.612);
+}
+.add-button:hover {
+  background-color: rgba(136, 50, 218, 0.912);
+}
+.delete-button {
+  padding: 7.5px 20px;
+  background-color: rgba(215, 15, 15, 0.605);
+}
+.delete-button:hover {
+  background-color: rgba(215, 15, 15, 0.905);
+}
+.move-up-button,
+.move-down-button {
+  background-color: rgba(21, 21, 215, 0.696);
+}
+.move-up-button:hover,
+.move-down-button:hover {
+  background-color: rgba(21, 21, 215, 0.996);
+}
+input[type="text"] {
+  font-size: 1.6rem;
+  padding: 10px;
+  border: 2px solid hsla(0, 0%, 80%, 0.5);
+  border-radius: 5px;
+  color: hsla(0, 0, 0, 0.6);
+}
+ul {
+  padding: 0;
+}
+li {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 15px;
+  background-color: hwb(0 100% 0% / 0.878);
+  margin-bottom: 10px;
+  border: 3px solid hsla(0, 0%, 87%, 0.827);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.text {
+  flex: 1;
+}
+.delete-button,
+.move-down-button,
+.move-up-button {
+  padding: 8px 12px;
+  font-size: 1.4rem;
+  margin-left: 10px;
+}
+.input-edit {
+  width: 75%;
+}
